@@ -1,0 +1,170 @@
+
+
+
+
+<!-- BODY CONTENT -->
+
+<div class="container-fluid">
+    <div class="row text-center p-3">
+      <div class="col">
+        <p class="display-5 text-warning">Students Data Form</p>
+      </div>
+    </div>
+   
+  <!-- FORM FOR GET DATA -->
+  
+    <div class="bg-warning p-3 mb-3">
+      <form action="" [formGroup]="StudentData" (ngSubmit)="type == 1 ? getData() : updateData()">
+        <div class="row mb-2">
+          <div class="col-md mb-3">
+            <label for="" class="form-label"><strong>First Name</strong></label
+            ><br />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter The First Name"
+              formControlName="FirstName"
+            />
+          </div>
+          <div class="col-md mb-3">
+            <label for="" class="form-label"><strong>Last Name</strong></label
+            ><br />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter The Last Name "
+              formControlName="LastName"
+            />
+          </div>
+        </div>
+  
+        <div class="row mb-2">
+          <div class="col-md mb-3">
+            <label for="" class="form-label"><strong>E-mail</strong></label
+            ><br />
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter The E-mail "
+              formControlName="Email"
+            />
+          </div>
+          <div class="col-md mb-3">
+            <label for="" class="form-label"
+              ><Strong>Age of Student</Strong></label
+            ><br />
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Enter The Age "
+              formControlName="Age"
+            />
+          </div>
+        </div>
+  
+        <div class="row mb-2">
+          <div class="col-md mb-3">
+            <label for="" class="form-label"><strong>Mobile Number</strong></label
+            ><br />
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Enter The Mobie Number"
+              formControlName="MobileNumber"
+            />
+          </div>
+          <div class="col-md mb-3">
+            <label for="" class="form-label"
+              ><Strong>Alternate Mobile number</Strong></label
+            ><br />
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Enter The other Mobie Number "
+              formControlName="AlternateNumber"
+            />
+          </div>
+        </div>
+  
+        <div class="row mb-2">
+          <div class="col-md mb-3">
+            <label for="" class="form-label"><Strong>Gender</Strong></label
+            ><br />
+            <div class="d-flex justify-content-evenly">
+             <div>
+              <input type="radio"  formControlName="gender" value="Male"/>Male
+             </div>
+           <div>
+              <input type="radio"  formControlName="gender" value="female">Female
+           </div>
+           <div>
+              <input type="radio"  formControlName="gender" value="others">Others
+           </div>
+            </div>
+          </div>
+  
+          <div class="col-md mb-3">
+            <label for="" class="form-label"><Strong>Date of Birth</Strong></label
+            ><br />
+            <input
+              type="date"
+              class="form-control"
+              placeholder="Enter The DOB "
+              formControlName="DateOfBirth"
+            />
+          </div>
+        </div>
+  
+  
+        <div class="row mb-2">
+          <div class="col-md mb-3">
+            <label for="" class="form-label"><strong>Department</strong></label
+            ><br />
+            <select name="" id="" class="form-control" formControlName="Department">
+              <option value="">Select The Department</option>
+              <option value="Computer science engineering">Computer science engineering</option>
+              <option value="infromation technology">infromation technology</option>
+              <option value="Electrical and Electronics engineering">Electrical and Electronics engineering</option>
+              <option value="Mechanical engineering">Mechanical engineering</option>
+              <option value="Civil Engineering">Civil Engineering</option>
+              <option value="Master of computer Application">Master of computer Application</option>
+              <option value="Master of Business Administrations">Master of Business Administrations</option>
+            </select>
+          </div>
+          <div class="col-md mb-3">
+            <label for="" class="form-label"><Strong>Year of Study</Strong></label
+            ><br />
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Enter The DOB "
+              formControlName="year"
+  
+            />
+          </div>
+        </div>
+  
+        <div class="row mb-3 ">
+          <div class="col-md">
+              <label for="" class="form-label"><strong>Address</strong></label>
+              <textarea name="" class="form-control" id="" cols="30" rows="10" formControlName="Address" placeholder="Enter the Address.."></textarea>
+          </div>
+        </div>
+  
+        <div class="row mb-2">
+          <div class="col d-flex justify-content-center justify-content-evenly">
+              <button class="btn btn-info"  [disabled]="StudentData.invalid ">
+                  {{type == 1 ? "submit":"Update"}}
+              </button>
+  
+              
+          </div>
+        </div>
+      </form>
+  
+     
+    </div>
+  
+  
+  </div>
+  

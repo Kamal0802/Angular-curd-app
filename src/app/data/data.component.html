@@ -1,0 +1,82 @@
+
+      
+      <!-- TABLE FOR DATA RENDERING -->
+
+      <!-- <div class="row">
+        <div class="col">
+            <nav class="navbar navbar-expand-sm text-center bg-info">
+                <div class="container-fluid">
+                  <a routerLink="" class="navbar-brand ps-3 "><i class="fa-solid fa-school"></i>&ensp; Angular-curd</a>
+                  <div class="row">
+                    <div class="col">
+                      <ul class="navbar-nav me-5 d-flex flex-row">
+                        <li class="nav-item p-3">
+                          <a class="nav-link active" href="form">Form</a>
+                        </li>
+                        <li class="nav-item p-3">
+                          <a class="nav-link" href="data">Data</a>
+                        </li>
+            
+                        <li class="nav-item p-3">
+                          <a class="nav-link" href="#">About</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </div>
+     -->
+
+     
+     <div class="container-fluid p-3">
+       
+        
+
+        
+       
+        <div class="row">
+            <div class="col">
+               <div class="table-responsive">
+               
+                <table class="table table-responsive table-striped bg-primary ">
+                  
+                 <thead>
+                    <tr>
+                        <th class="table-warning">S.no</th>
+                        <th class="table-warning">Name</th>
+                        <th class="table-warning">E-mail</th>
+                        <th class="table-warning">Mobile Number</th>
+                        <th class="table-warning">Department</th>
+                        <th class="table-warning">Year of study</th>
+                        <th class="table-warning">Gender</th>
+                        <th class="table-warning">D.O.B</th>
+                        <th class="table-warning">Address</th>
+                        <th class="table-warning">Edit Data</th>
+                        <th class="table-warning">Delete Data</th>
+                        
+                    </tr>
+                 </thead> 
+                 <tbody>
+                    <tr *ngFor="let value of InputData let i=index">
+                        <td>{{1+i}}</td>
+                        <td>{{value.FirstName + value.LastName}}</td>
+                        <td>{{value.Email}}</td>
+                        <td>{{value.MobileNumber}}</td>
+                        <td>{{value.Department}}</td>
+                        <td>{{value.year}}</td>
+                        <td>{{value.gender}}</td>
+                        <td>{{value.DateOfBirth}}</td>
+                        <td>{{value.Address}}</td>
+                        <td><a routerLink="/Dashboard/{{value.id}}"><button class="btn btn-success" (click)="editData(value.id)" ><i class="fa-solid fa-user-pen"></i> Edit</button></a></td>
+                        <td><button class="btn btn-danger" (click)="deleteData(value.id)"><i class="fa-solid fa-user-slash"></i> Delete</button></td>
+                    </tr>
+                 </tbody> 
+                </table>
+              </div>
+            </div>
+        </div>
+
+
+      </div>
